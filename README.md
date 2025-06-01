@@ -30,7 +30,7 @@ Users should be able to:
 <br>
 
 **MOBILE (375px)** <br>
-![](./screenshots/desktop.jpeg)
+![](./screenshots/mobile.jpeg)
 
 ### Links
 
