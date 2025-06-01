@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-ctBjdcY_yi)
 - Live Site URL: [Site URL](hhttps://codebymm.github.io/fm_dropDownNavigation/)
 
 ## My process
@@ -47,4 +47,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@codebyMM](https://www.frontendmentor.io/profile/codebyMM)
