@@ -1,0 +1,371 @@
+/* ============ GOOGLE FONT ============ */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+/* ============ CSS VARIABLES ============ */
+:root {
+    /* Color */
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Epilogue", sans-serif;;
+}
+a {
+    color: var(--Almost-Black);
+    text-decoration: none;
+}
+p {
+    font-size: 1.125em;
+}
+ul {
+    list-style: none;
+}
+body {
+    font-size: 1em;
+    background: var(--Almost-White);
+}
+header,
+.header-menu,
+.left-menu,
+.right-menu,
+li a,
+ul,
+main,
+.main-left {
+    display: flex;
+}
+/* ============ HEADER ============ */
+header {
+    align-items: center;
+    padding: 1.45rem 2.46rem;
+    gap: 4rem;
+}
+.header-menu {
+    justify-content: space-between;
+    width: 100%;
+}
+.logo {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+.left-menu ul {
+    gap: 2.43rem;
+    padding-top: .5rem;
+}
+li a,
+.right-menu a {
+    font-size: .86em;
+    font-weight: 500;
+    color: var(--Medium-Gray);
+}
+li a {
+    align-items: center;
+    gap: .3rem;
+}
+li:hover a{
+    color: var(--Almost-Black);
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    all: unset;
+    min-width: 120px;
+    display: none;
+    top: 100%;
+    margin-top: .8rem;
+    position: absolute;
+    background: #fff;
+    right: 0;
+    padding: .8rem .5rem;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  height: .8rem;
+}
+.dropdown-menu li:last-of-type {
+    padding-bottom: 0;
+}
+.dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: .6rem .8rem;
+    font-size: .87em;
+    border-radius: 4px;
+}
+.dropdown-menu li a img {
+    width: .9em;
+    height: .9em;
+}
+.dropdown-menu li a:hover {
+    background-color: var(--Almost-White);
+}
+.right-menu {
+    gap: 1.6rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+.right-menu a {
+    font-weight: 500;
+}
+.btn-register {
+    padding: .68rem 1.2rem;
+    border-radius: 14px;
+    border: 2px solid var(--Medium-Gray);
+}
+
+/* ============ MAIN ============ */
+main {
+    align-items: center;
+    height: calc(100vh - 86.13px);
+    padding: 1rem 0 4rem;
+    justify-content: center;
+    width: 80vw;
+    margin: 0 auto;
+}
+.main-left {
+    flex-basis: 55%;
+    height: 100%;
+    padding-left: 2.5rem;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-left h1 {
+    font-size: 4em;
+    margin-top: auto;
+}
+.main-left h1::after {
+    content: 'remote work';
+    display: block;
+}
+.main-left p {
+    padding: 3rem 0;
+    width: 75%;
+    color: var(--Medium-Gray);
+}
+.main-left button {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--Almost-Black);
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    width: fit-content;
+    background: var(--Almost-Black);
+    color: var(--Almost-White);
+    transition: background .5s ease, color .5s ease;
+}
+.main-left button:hover {
+    background: var(--Almost-White);
+    color: var(--Almost-Black);
+}
+.main-right {
+    background: url(./images/image-hero-desktop.png) no-repeat center;
+    width: 100%;
+    flex-basis: 45%;
+    background-size: contain;
+    height: 100%;
+}
+.client-list {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.client-list img {
+    width: 70px;
+    height: auto;
+}
+
+.btn-toggle {
+    display: none;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 2em;
+}
+.btn-close {
+    display: none;
+    background: none;
+    width: fit-content;
+    align-self: flex-end;
+    font-size: 2em;
+    border: none;
+    padding: .5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        width: 90vw;
+        padding-right: 2rem;
+    }
+}
+@media screen and (max-width: 770px) {
+    header {
+        padding-top: 1.5rem;
+        padding-bottom: 0;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    .btn-close {
+        display: block;
+    }
+    .header-menu {
+        justify-content: flex-start;
+        position: absolute;
+        right: -1000%;
+        display: none;
+        max-width: 50vw;
+        flex-direction: column;
+        height: 100dvh;
+        z-index: 999;
+        background: var(--Almost-White);
+        top: 0;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .left-menu {
+        flex-direction: column;
+        height: auto;
+    }
+    .left-menu ul {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .right-menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    .btn-register {
+        width: 100%;
+        text-align: center;
+    }
+    .btn-toggle {
+        display: block;
+    }
+    .dropdown-menu {
+        all: unset;
+        min-width: 120px;
+        display: none;
+        top: 100%;
+        margin-top: .8rem;
+        position: static;
+        background: #fff;
+        right: 0;
+        padding: .8rem .5rem;
+        border-radius: 8px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    main {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        height: 100vh;
+        padding: 0 0 2rem;
+        justify-content: center;
+        width: auto;
+        margin: 0 auto;
+        padding-right: 0;
+    }
+    .main-left {
+        flex-basis: auto;
+        padding-left: 0;
+        margin-top: 0rem;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        text-align: center;
+    }
+    .main-left h1 {
+        font-size: 3em;
+        margin-top: .5rem;
+        display: inline;
+    }
+    .main-left h1::after {
+        content: '\00a0remote work';
+        display: inline;
+    }
+    .main-left p {
+        padding: 1rem 0;
+        width: 95%;
+        color: var(--Medium-Gray);
+    }
+    .main-left button {
+        padding: 1rem 1.5rem;
+        font-size: 1em;
+    }
+    .main-right {
+        background: url(./images/image-hero-mobile.png) no-repeat center;
+        width: 100%;
+        flex-basis: 100%;
+        background-size: contain;
+        height: 100%;
+    }
+    .client-list {
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 475px) {
+    .main-left {
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    .main-left h1 {
+        font-size: 2.5em;
+        margin-top: 1rem;
+        display: inline;
+    }
+    header {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .client-list img {
+        width: 50px;
+        height: auto;
+    }
+    .main-left p {
+        font-size: .95em;
+    }
+}
+@media screen and (max-width: 385px) {
+    .main-left h1 {
+        font-size: 2em;
+    }
+}
+.background {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.568);
+}
+.show-menu {
+    right: 0;
+    display: flex;
+}
+.show {
+    display: block;
+}
+.right {
+    right: 0;
+}
+.left {
+    left: 0;
+}
